@@ -3,6 +3,10 @@
 require_relative "rubato/version"
 
 module Rubato
-  class Error < StandardError; end
-  # Your code goes here...
+  require "rubato/constants"
+  require "rubato/note"
+  require "rubato/scale"
+
+  def practice(num_notes, key)
+  end
 end
