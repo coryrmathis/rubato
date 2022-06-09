@@ -1,12 +1,11 @@
 module Rubato
-  class InvalidNoteNameError < StandardError; end
-
   class Note
-    attr_reader :name
+    NAMES = ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"]
+    attr_reader :name, :frequency
 
-    def initialize(name)
-      raise InvalidNoteNameError if !CHROMATIC_SCALE.include?(name)
-      @name = name
+    def initialize(name:, frequency:)
+      @name = name 
+      @frequency = frequency
     end
   end
 end
